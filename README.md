@@ -31,10 +31,4 @@
 </p>
 </br>
 
-<h3 align="left">Status</h3>
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=jenesyx&show_icons=true&theme=synthwave&locale=en" alt="jenesyx" /></p>
-</br>
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=jenesyx&show_icons=true&theme=synthwave&locale=en&layout=compact" alt="jenesyx" /></p>
-</br>
-<br>
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=jenesyx&theme=dark" alt="jenesyx" /></p>
