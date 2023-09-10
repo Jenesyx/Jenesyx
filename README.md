@@ -7,7 +7,7 @@
 
 - 🌱 I’m currently learning **everything 🤣**
 
-- 🥅 2022 Goals: **Learn more about web3 and Blockchain**
+- 🥅 2023 Goals: **Become fully Front developer and solidity hunter**
 
 <h3 align="left">Skills</h3>
 <p align="left"> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>
