@@ -4,7 +4,7 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=jenesyx&theme=discord" alt="jenesyx" /></a> </p>
 
-- 🔭 I’m currently working on [my own Website and Smart contracts](https://jenesyx.me/)
+- 🔭 I’m currently working on [my own Website] and Smart contracts(https://jenesyx.me/)
 - 👯 I’m looking to collaborate on Front-end projects
 - 🌱 I’m currently learning everything but mostly Front-end
 - 💬 Ask me about Front-end, Solidity, Data, C and C#
