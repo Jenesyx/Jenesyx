@@ -6,7 +6,7 @@
   <img src="https://komarev.com/ghpvc/?username=jenesyx&label=Profile%20views&color=0e75b6&style=flat" alt="jenesyx" />
 </p>
 
-- 🔭 I’m currently working on my own [Website](https://jenesyx.me/) and Smart contracts  
+- 🔭 I’m currently working on my own [Website](https://artabidkhori.com/) and my Startup
 - 👯 I’m looking to collaborate on Front-end projects  
 - 🌱 I’m currently learning everything but mostly Front-end  
 - 💬 Ask me about Front-end, Solidity, Data, C and C#  
