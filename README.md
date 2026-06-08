@@ -84,11 +84,6 @@
 <h3 align="center">Stars</h3>
 
 <p align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jenesyx&layout=compact&theme=radical" alt="jenesyx" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=jenesyx&show_icons=true&locale=en&theme=radical" alt="jenesyx" />
-</p>
-
-<p align="center">
   <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=jenesyx&theme=radical" alt="jenesyx" />
 </p>
 
