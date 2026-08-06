@@ -25,7 +25,7 @@ HOST = "jenesyx"
 ROWS = [
     ("Now",        "Building artabidkhori.com + my own startup + Agentic OS"),
     ("Prev",       "Front-end work, UI design, small product builds"),
-    ("Stack",      "React · Next.JS · Javascript ·TypeScript · Node · Sass · Solidity · C / C#"),
+    ("Stack",      "React · Next.js · JavaScript · TypeScript · Node · Sass · Solidity · C / C#"),
     ("Highlights", "Design-to-code handoff, smart contracts, data-heavy UIs"),
     ("Learning",   "Everything, but mostly Ai and Data"),
     ("Reach",      "@jenesyx · artabidkhori.com"),

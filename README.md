@@ -8,10 +8,7 @@
 
 <h3><code>arta@github ~ $ whoami</code></h3>
 
-<p>
-  <img src="./avi-ascii.svg" width="370" align="top" alt="ASCII portrait" />
-  <img src="./info-card.svg" width="490" align="top" alt="Info card" />
-</p>
+<img src="./whoami.svg" width="860" alt="ASCII portrait and info card" />
 
 <br>
 
