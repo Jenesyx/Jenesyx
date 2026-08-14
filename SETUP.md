@@ -1,12 +1,12 @@
 # Jenesyx Terminal — Setup Guide
 
-This template creates the green terminal profile shown in this folder: a self-typing ASCII portrait, neofetch-style information card, and live contribution heatmap.
+This template creates the green-black-blue terminal profile shown in this folder: a live contribution heatmap, self-typing ASCII portrait beside an animated ASCII name, and the original neofetch-style information card.
 
 ## Fastest setup
 
 1. Create a public repository named exactly like your GitHub username.
 2. Copy **the contents** of `Jenesyx` into it, excluding `.git` and `.venv` if they exist locally.
-3. Edit the personal text in `scripts/make_info_card.py` and the contact links in `README.md`.
+3. Edit the personal text in `scripts/make_info_card.py`, identity settings in `scripts/make_identity.py`, and contact links in `README.md`.
 4. Replace `source-photo.jpg` and regenerate the portrait.
 5. Push the repository and run **Update profile art** in GitHub Actions.
 
@@ -34,6 +34,7 @@ your-username/
 ├── scripts/
 ├── avi-ascii.svg
 ├── contrib-heatmap.svg
+├── identity.svg
 ├── info-card.svg
 ├── source-photo.jpg
 ├── source-prepped.png
@@ -44,7 +45,17 @@ your-username/
 
 Do **not** copy a nested `.git` folder or `.venv` environment. Make sure the hidden `.github` folder is copied.
 
-## 3. Personalize the information card
+## 3. Personalize the ASCII identity and information card
+
+Open `scripts/make_identity.py` and edit the identity block near the top:
+
+```python
+WORDMARK = "ARTA"
+USER = "arta"
+HOST = "jenesyx"
+```
+
+The current generator contains the `A`, `R`, and `T` glyphs needed for `ARTA`. Add another glyph to `GLYPHS` before using a different letter.
 
 Open `scripts/make_info_card.py` and edit only the section marked `EDIT ME`:
 
@@ -61,11 +72,11 @@ ROWS = [
 
 Keep values reasonably short; long text wraps and makes the card taller.
 
-Regenerate the card and combined identity image:
+Regenerate the original right-side information card and the new identity image:
 
 ```bash
 python scripts/make_info_card.py
-python scripts/compose_whoami.py
+python scripts/make_identity.py
 ```
 
 ## 4. Create your ASCII portrait
@@ -80,7 +91,7 @@ Use this when your photo already has a simple background:
 python -m pip install -r scripts/requirements-portrait-basic.txt
 python scripts/prep_photo.py source-photo.jpg --no-rembg
 python scripts/make_ascii_svg.py
-python scripts/compose_whoami.py
+python scripts/make_identity.py
 ```
 
 ### Automatic background-removal method
@@ -91,7 +102,7 @@ This installs larger machine-learning dependencies but can remove a complex back
 python -m pip install -r scripts/requirements-portrait.txt
 python scripts/prep_photo.py source-photo.jpg
 python scripts/make_ascii_svg.py
-python scripts/compose_whoami.py
+python scripts/make_identity.py
 ```
 
 If the portrait looks too bright, dark, or detailed, adjust `--clip`, `--gamma`, or the `--cols` value documented by the scripts, then regenerate it.
@@ -105,7 +116,7 @@ In `README.md`:
 - Replace badge labels and usernames.
 - Remove contact buttons you do not need.
 
-Do not rename `whoami.svg` or `contrib-heatmap.svg` unless their paths are also updated in `README.md`.
+Do not rename `identity.svg`, `info-card.svg`, or `contrib-heatmap.svg` unless their paths are also updated in `README.md`.
 
 ## 6. Generate live contribution data locally
 
@@ -155,12 +166,13 @@ My details:
 - Website and social links: [LINKS]
 - Portrait image path: [PATH TO MY PHOTO]
 
-Please inspect the existing repository and scripts first. Do not copy or modify nested .git or .venv folders. Update only the EDIT ME section in scripts/make_info_card.py and the personal headings, badges, and links in README.md. Prepare the portrait, generate avi-ascii.svg and info-card.svg, compose whoami.svg, fetch my live contribution data if internet access is available, render contrib-heatmap.svg, and validate all generated SVG files and local Markdown links. Preserve the terminal design and animations. Verify that the workflow supports the default branch and is correctly placed. Do not change unrelated files, and do not commit or push unless I explicitly ask.
+Please inspect the existing repository and scripts first. Do not copy or modify nested .git or .venv folders. Update only the EDIT ME section in scripts/make_info_card.py, the identity settings in scripts/make_identity.py, and the personal headings, badges, and links in README.md. Prepare the portrait, generate avi-ascii.svg, identity.svg, and info-card.svg, fetch my live contribution data if internet access is available, render contrib-heatmap.svg, and validate all generated SVG files and local Markdown links. Preserve the green-black-blue terminal design, the animated ASCII name, and the original neofetch information panel. Keep the README order as contribution, ASCII identity, whoami information, then contact. Do not add a separate status --all panel. Verify that the workflow supports the default branch and is correctly placed. Do not change unrelated files, and do not commit or push unless I explicitly ask.
 ```
 
 ## Common problems
 
 - **Portrait generation uses too much memory:** use the basic method with `--no-rembg`.
 - **Portrait has a noisy background:** use a cut-out image or the full background-removal method.
-- **Two panels do not align:** rerun `make_info_card.py`, then `compose_whoami.py` last.
+- **The identity portrait is stale:** rerun `make_ascii_svg.py`, then `make_identity.py` last.
+- **The ASCII name is wrong:** update `WORDMARK` and ensure every letter exists in `GLYPHS`.
 - **Contribution data is wrong:** pass the exact username to `fetch_contributions.py` or run the Action in the correct profile repository.
